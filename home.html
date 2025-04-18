@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastZip - Online ZIP & UNZIP</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="title">FastZip</h1>
+    <p id="subtitle">Quickly compress and extract files directly from your browser</p>
+    <select id="langSelect">
+      <option value="en">🇬🇧 English</option>
+      <option value="it">🇮🇹 Italiano</option>
+    </select>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="uploadTitle">Upload your files</h2>
+      <div id="dropzone">Drop files here or click to upload</div>
+      <input type="file" id="fileInput" multiple hidden>
+      <ul id="fileList"></ul>
+      <button id="zipButton">Create ZIP</button>
+    </section>
+
+    <section>
+      <h2 id="unzipTitle">Unzip a file</h2>
+      <input type="file" id="unzipInput" accept=".zip">
+      <ul id="unzippedList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ to make your file life easier.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
